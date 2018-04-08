@@ -1,5 +1,5 @@
 package Pouzivatelia;
 
-public final class Ucitel {
+public final class Ucitel extends Uzivatel {
 
 }

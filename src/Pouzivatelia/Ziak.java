@@ -1,5 +1,5 @@
 package Pouzivatelia;
 
-public final class Ziak {
+public final class Ziak extends Uzivatel {
 
 }
