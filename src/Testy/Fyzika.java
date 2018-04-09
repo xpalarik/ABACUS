@@ -2,15 +2,15 @@ package Testy;
 
 public class Fyzika extends Kvíz{
 
- super.boduj() {
-		 
-		 int spravne = 0;
+public int boduj() {
+
+	 int body = getbody();
 	     
-	            if (odpoved.compareTo(kluc[cisotazka])==0){
-	                spravne++;}
-	            else {spravne--;}
+	            if (getodpoved().compareTo(getkluc()[getcisotazka()])==0){
+	                body++;}
+	            else {body--;}
 	            
-	 				return spravne;
+	 				return body;
 	 }	
 	
 }

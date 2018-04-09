@@ -1,26 +1,28 @@
 package Testy;
 
 public class Matematika extends Kvíz {
- super.boduj() {
-		 
-		 int spravne = 0;
+public int boduj() { 
+	
+	
+	
+	
 		 int intkluc = 0;
 		 int intodpoved = 0;
 		 int tolerancia = 0;
+		 int body = getbody();
 		 
-		 intkluc = parseInt(kluc[cisotazka]);
-		 intodpoved = parseInt(odpoved);
+		 intkluc = parseInt(getkluc()[getcisotazka()]);
+		 intodpoved = parseInt(getodpoved());
 		 tolerancia = intodpoved-intkluc;
 	     
 	            if (intodpoved == intkluc || tolerancia > 0.99 || tolerancia < 0.99){
-	                spravne++;}
-	            else {spravne--;}
+	                body++;}
+	            else {body--;}
 	            
-	 				return spravne;
+	 				return body;
 	 }
 
 private int parseInt(String string) {
-	// TODO Auto-generated method stub
 	return 0;
 }	
 }

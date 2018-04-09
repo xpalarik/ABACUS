@@ -1,34 +1,41 @@
 package Testy;
 
-public class Kvíz{
+public abstract class Kvíz{
 
 	
-	public String[] kluc;
-	public String[] otazky;
-	public String odpoved;
-	public int body = 0;
-	public int cisotazka = 0;
+	private String[] kluc;
+	private String[] otazky;
+	private String odpoved;
+	private int body = 0;
+	private int cisotazka = 0;
+
+	public String[] getkluc() {
+			return kluc;}
+	public String[] getotazky() {
+			return otazky;}
+	public String getodpoved() {
+	return odpoved;}
+	public int getbody() {
+	return body;}
+	public int getcisotazka() {
+	return cisotazka;}
 	
-	public Kvíz(String[] k, String[] ot, String od){
-		
-	this.kluc = k;
-	this.otazky = ot;
-	this.odpoved = od;
-		
+
+	public Kvíz(){}	
 	            
-	 public static int boduj() {
-		 
-		 int spravne = 0;
+	 public int boduj() {
 	     
 	            if (odpoved.compareTo(kluc[cisotazka])==0)
-	                spravne++;
+	                body++;
 	           
-	 				return spravne;
-	 }
-	        v 
+	 				return body;
+	 					}
+	        
+	 
+	 public int vyhodnot() {
 	 for (cisotazka = 0; cisotazka < 20; cisotazka++){
          System.out.println(otazky[cisotazka]);
-         body += boduj();
+         body = boduj();
          }
 
 	        if (body > 14){
@@ -37,9 +44,10 @@ public class Kvíz{
 	           System.out.println("Nespravil si test");
 	        }
 	        System.out.println("Mas " + body + " spravnych odpovedi.");
-
+	 					
+	 return body;
+	 }
 
 
 	}
 
-}
