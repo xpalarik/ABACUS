@@ -6,8 +6,8 @@ public class Kvíz{
 	public String[] kluc;
 	public String[] otazky;
 	public String odpoved;
-	public int body;
-	public int cisotazka;
+	public int body = 0;
+	public int cisotazka = 0;
 	
 	public Kvíz(String[] k, String[] ot, String od){
 		
@@ -25,9 +25,10 @@ public class Kvíz{
 	           
 	 				return spravne;
 	 }
-	        
+	        v 
 	 for (cisotazka = 0; cisotazka < 20; cisotazka++){
          System.out.println(otazky[cisotazka]);
+         body += boduj();
          }
 
 	        if (body > 14){
