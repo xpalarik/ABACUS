@@ -1,18 +1,23 @@
 package Testy;
 
-public abstract class Kvíz{
+public class Kvíz{
 
-	    String[] kluc = {"b","a"};
-	    String[] otazky = {"bla bla bla \n a/b","ble ble ble \n a/b"};
-	    String odpoved = "";
-	    
+	
+	public String[] kluc;
+	public String[] otazky;
+	public String odpoved;
+	
+	public Kvíz(String[] k, String[] ot, String od){
+		
+	this.kluc = k;
+	this.otazky = ot;
+	this.odpoved = od;
+		
 	        int correct = 0;
 	        int incorrect = 0;
-	        String answer = "";
 
 	        for (int cisotazka = 0; cisotazka < 20; cisotazka++){
 	            System.out.println(otazky[cisotazka]);
-	            odpoved = System.console().readLine();
 
 	            if (odpoved.compareTo(kluc[cisotazka])==0){
 	                correct++;} 
@@ -28,3 +33,5 @@ public abstract class Kvíz{
 	        System.out.println("You have " + incorrect + " incorrect answers.");
 
 	}
+
+}
